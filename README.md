@@ -48,8 +48,23 @@ const router = new VueRouter({
 const app = new Vue({ router }).$mount('#app')
 ```
 
-上面是vue-router的官方例子，router主要是为了在单页面上某些链接，可达到页面区域内容的切换效果。首先是1.在html中router-link定义实现路由的链接，
-to属性后接路由地址；2.定义router-view，用于渲染路由的内容。<br>
+上面是vue-router的官方例子，router主要是为了在单页面上某些链接，可达到页面区域内容的切换效果。<br>
+首先是1.在html中router-link定义实现路由的链接，to属性后接路由地址；2.定义router-view，用于渲染路由的内容。<br>
 然后在javascript中添加路由界面：1.定义需要路由的模块内容并赋予名字，方便使用；2.实例化VueRouter对象，其中routes为路由地址下的
 具体实现哪个播版内容——path：路由地址，对应<route-link>中的路由地址，点击对应的<route-link>可实现该部分的路由；component：渲染的内容。js最后一句
-用于将实例化的router应用于id为app的对象中
+用于将实例化的router应用于id为app的对象中.<br>
+一个页面中可有多个router-view渲染，如下：
+```html
+  <router-view class="view one"></router-view>
+  <router-view class="view two" name="a"></router-view>
+  <router-view class="view three" name="b"></router-view>
+```
+用name属性可进行不同渲染部分的区分，没有name的则用default代替。
+```javascript
+ components: {
+        default: Foo,
+        a: Bar,
+        b: Baz
+      }
+```
+对于渲染内容的定义，可用name名来区分定义，这样就清晰多了~
