@@ -1,6 +1,6 @@
 # Vue-learning
-## 2017.10.20
-从九月分开始找工作，发觉自己在Vue方面还不是吃的很透，所以狠下心来好好补补，从今天开始记录，来帮助自己成长。
+## 2017.10.20 
+从九月分开始找工作，发觉自己在Vue方面还是实践经验不足~所以从今天开始记录自己的学习过程，来帮助自己成长。
 ```html
 <div id="app">
   <p>
@@ -68,3 +68,24 @@ const app = new Vue({ router }).$mount('#app')
       }
 ```
 对于渲染内容的定义，可用name名来区分定义，这样就清晰多了~
+
+
+## 2017.10.21
+今天在看别人的项目中，看到了axios，可以实现js中ajax的功能。
+```javascript
+this.$http({
+                url: 'https://cnodejs.org/api/v1/topics',
+                method: 'get',
+                params: {
+                    page: 1,
+                    limit: this.limit,
+                    mdrender: 'false',
+                },
+            }).then((res) => {
+                this.content = res.data.data;
+                //console.log(res,this.content);
+            }).catch((res) => {
+                console.log('MaiSec.vue: ', res);
+            });
+```
+作者先import了axios，然后定义Vue.prototype.$http为axios,方便我们平时的写码习惯。可以看到，url定义的是一个外域，所以说这个功能还是想但方便的呢~catch部分主要是用来捕获失败后的信息，总体来说和ajax用法很像，也很方便，应该是更加方便~~
