@@ -88,4 +88,5 @@ this.$http({
                 console.log('MaiSec.vue: ', res);
             });
 ```
-作者先import了axios，然后定义Vue.prototype.$http为axios,方便我们平时的写码习惯。可以看到，url定义的是一个外域，所以说这个功能还是想但方便的呢~catch部分主要是用来捕获失败后的信息，总体来说和ajax用法很像，也很方便，应该是更加方便~~
+作者先import了axios，然后定义Vue.prototype.$http为axios,方便我们平时的写码习惯。可以看到，url定义的是一个外域，所以说这个功能还是想但方便的呢~catch部分主要是用来捕获失败后的信息，总体来说和ajax用法很像，也很方便，应该是更加方便~<br>
+不过params参数选项不太清楚了，可能后台有相应的参数选择，以后对cnode再多了解下应该能解答这个问题了
