@@ -3,8 +3,9 @@
    	 <div class="profile" v-loading.lock='loading'>
      	 	<div>
      	 	   <img :src='userInfo.avatar_url' :title='userInfo.loginname' />
+           <span>{{ userInfo.loginname }}</span>
      	 	</div>
-     	 	<span>{{ userInfo.loginname }}</span>
+     	 	
      	 	<p>
      	 	    <icon name="score" scale = 4></icon>
      	 	    <span>积分：</span>{{ userInfo.score }}
@@ -92,3 +93,72 @@ export default{
 	}
 }
 </script>
+<style scoped>
+.secDiv {
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+.profile {
+    padding: 1rem;
+    background: #EFF2F7;
+    border-radius: 0.3rem;
+}
+
+.profile div {
+    margin-bottom: 1.5rem;
+}
+
+.profile div span {
+    font-size: 25px;
+    color: black;
+    margin-left: 1rem;
+}
+
+.profile p {
+    display: flex;
+    align-items: center;
+    color: grey;
+    margin: 0.5rem 0;
+}
+
+.profile p span {
+    margin: 0 0.5rem;
+    color: black;
+}
+
+.profile svg {
+    color: black;
+    margin-left: 0.2rem;
+}
+.replies,
+.topics{
+  margin-top:1.5rem;
+  padding:1.2rem;
+  background: #EFF2F7;
+  border-radius: 1rem;
+}
+.replies>p,
+.topics>p{
+  font-weight:bold;
+}
+.replies img,
+.topics img{
+  width:5rem;
+  height:5rem;
+  padding-right:1rem;
+}
+.replies div,
+.topics div{
+  display:flex;
+  align-items:center;
+  margin:2rem 0;
+  border-bottom:1px solid #ccc;
+}
+.replies div a,
+.topics div a{
+  color:#000;
+  text-decoration: none;
+}
+</style>
