@@ -105,5 +105,34 @@ name属性为需要用到图片的名字，scale表视图的大小规模。
 上传了这几天一直在做一个vue的练习，主要实现的是从服务器获取文章界面，作者信息等内容，为单页面结构。里面用到了之前提到的vue-router,axios等，通过这段时间的练习呢，我对webpack和Vue也有了更深的认识。这个作品还没有添加样式，所以暂时看来有点丑，哈哈，不过我会很快给他装扮起来的。
 
 ## 2017.10.24
-昨天生日给自己放了半天假，哈哈，不过还是把第一个完整的vue小项目搞完了。需要说的是，当我第一次按下npm run-dev的时候，一场篇的错误提醒代码，全是来自eslint Rules的，好吧，不得不承认我的代码是有随意的地方，我也确实不太在意在function括号后面空格。所以在调试的时候就默默的把eslint rules给删除了。现在看来，确实给自己提了个醒，以后还会敲更多代码，所以应当规范自己的代码习惯，下次我会默默的加进来的~
+昨天生日给自己放了半天假，哈哈，不过还是把第一个完整的vue小项目搞完了。需要说的是，当我第一次按下npm run-dev的时候，一场篇的错误提醒代码，全是来自eslint Rules的，好吧，不得不承认我的代码是有随意的地方，我也确实不太在意在function括号后面空格。所以在调试的时候就默默的把eslint rules给删除了。现在看来，确实给自己提了个醒，以后还会敲更多代码，所以应当规范自己的代码习惯，下次我会默默的加进来的~<br>
+这里插一个我觉得还挺好的垂直居中的方法，在做对话框之类的定高页面挺好用的：
+```html
+<style rel="stylesheet">
+
+.main{
+  width:100%;
+  height:500px;
+  background-color:pink;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%)
+}
+.box{
+  width:50px;
+  height:50px;
+  background-color: black;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+</style>
+<body>
+<div class="main">
+  <div class="box"></div>
+</div>
+```
+
 
