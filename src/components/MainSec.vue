@@ -4,9 +4,11 @@
    	  	 <router-link :to='{name:"UserRoute",params:{name:item.author.loginname}}'> 
    	  	 	<img :src='item.author.avatar_url' :title='item.author.loginname' />
    	  	 </router-link>
-   	  	 <router-link :to='{name:"ArticleRoute",params:{ id:item.id }}'>{{ item.title }}</router-link>
-         <span>回复：{{ item.reply_count }}</span>
-         <span>创建于：{{ getTime }}</span>
+         <div class="textDiv">
+     	  	 <router-link :to='{name:"ArticleRoute",params:{ id:item.id }}'>{{ item.title }}</router-link>
+           <span>回复：{{ item.reply_count }}</span>
+           <span>创建于：{{ getTime }}</span>
+         </div>
    	  </div>
    </div>
 </template>
@@ -71,3 +73,34 @@ console.log('Begin 1');
    	}
    }
 </script>
+
+<style scoped>
+.secDiv{
+   width:60%;
+}
+.secDiv>div{
+   display:flex;
+   justify-content: flex-start;
+   margin-top:1rem;
+}
+.secDiv img{
+  width:6rem;
+  height:6rem;
+  padding-right:2rem;
+}
+.textDiv{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.textDiv a{
+   font-weight: bold;
+   text-decoration: none;
+   color:#000;
+}
+.textDiv span{
+  font-size: .8rem;
+  padding-right:2rem;
+  margin-top:1rem;
+}
+</style>
